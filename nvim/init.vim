@@ -29,7 +29,8 @@ set nocompatible
 set autoindent
 set shiftwidth=2
 set tabstop=2
-
+:autocmd Filetype go set sw=8
+:autocmd Filetype go set ts=8
 "
 " Search
 "
@@ -60,6 +61,9 @@ set pastetoggle=<F3>
 
 " Disable auto commenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Highlight line to not be an underline
+highlight Visual cterm=reverse ctermbg=NONE
 
 "
 " Split ctrl+hjkl navigation
