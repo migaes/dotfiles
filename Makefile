@@ -11,3 +11,6 @@ urxvt:
 	ln -fs `pwd`/urxvt/Xresources ~/.Xresources
 	xrdb ~/.Xresources
 
+git:
+	ln -fs `pwd`/git/gitconfig ~/.gitconfig
+
