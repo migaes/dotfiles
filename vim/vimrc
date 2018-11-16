@@ -1,0 +1,63 @@
+"
+"" General
+"
+
+filetype plugin on		" Enable loading the plugin file and for specific file types
+filetype indent on		" Enable loading the indent file for specific file types
+set nocompatible		" Enable vim features instead of strict vi compatibility
+filetype on			" Try to detect the filetype
+syntax on			" Enable syntax highlighting
+syntax sync fromstart		" Sync syntax highlighting from the start of the file
+set encoding=utf-8              " The encoding displayed.
+set fileencoding=utf-8          " The encoding written to file.
+set t_Co=256			" Tell vim it's OK to use 256 colors at the terminal
+set background=light
+colorscheme PaperColor
+set mouse=a			" Enable the use of mouse in all modes.
+set scrolloff=3			" Show 3 lines above or below cursor when scrolling
+set ruler			" Enable the ruler
+set nowrap			" Do not wrap long lines; have them scroll off the side
+set showmatch			" Show matching brackets and parens
+set wildmenu			" Use pop-up menu for tab completion of filenames
+
+"
+" Map jj to get to normal mode.
+"
+inoremap jj <ESC>
+
+"
+" Set <leader> key
+"
+let mapleader = ","
+noremap \ ,
+
+"
+" Copy to and paste from the system clipboard (register +)
+"
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>y "+y
+
+"
+" Split ctrl+hjkl navigation
+"
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"
+"" Search
+"
+set ignorecase                  " Ignore case by default
+set smartcase                   " Make search case sensitive only if it contains uppercase letters
+set wrapscan                    " Search again from top when reached the bottom
+set nohlsearch                  " Don't highlight after search
+
+"
+"" No backups
+"
+set nobackup
+set nowritebackup
+set noswapfile
+
