@@ -1,8 +1,8 @@
-all: neovim tmux urxvt
-.PHONY: neovim tmux urxvt
+all: git neovim tmux urxvt vim
+.PHONY: git tmux urxvt vim
 
-neovim:
-	ln -fs `pwd`/nvim ~/.config/nvim
+git:
+	ln -fs `pwd`/git/gitconfig ~/.gitconfig
 
 tmux:
 	ln -fs `pwd`/tmux/tmux.conf ~/.tmux.conf
@@ -11,6 +11,6 @@ urxvt:
 	ln -fs `pwd`/urxvt/Xresources ~/.Xresources
 	xrdb ~/.Xresources
 
-git:
-	ln -fs `pwd`/git/gitconfig ~/.gitconfig
+vim:
+	ln -fs `pwd`/vim/vimrc ~/.vimrc
 
