@@ -1,8 +1,11 @@
 all: git neovim tmux urxvt vim
-.PHONY: git tmux urxvt vim
+.PHONY: git readline tmux urxvt vim
 
 git:
 	ln -fs `pwd`/git/gitconfig ~/.gitconfig
+
+readline: 
+	ln -fs `pwd`/readline/inputrc ~/.inputrc
 
 tmux:
 	ln -fs `pwd`/tmux/tmux.conf ~/.tmux.conf
