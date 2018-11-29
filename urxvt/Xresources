@@ -19,21 +19,79 @@ URxvt.scrollBar: false
 URxvt.font	       : xft:inconsolata:pixelsize=15
 URxvt.xftAntialias     : true
 URxvt.depth            : 32
-URxvt.background       : #1C1C1C
-URxvt.foreground       : #D0D0D0
-URxvt.color0           : #121212
-URxvt.color8           : #0A0A0A
-URxvt.color1           : #D78787
-URxvt.color9           : #DF8787
-URxvt.color2           : #AFD787
-URxvt.color10          : #AFDF87
-URxvt.color3           : #F7F7AF
-URxvt.color11          : #FFFFAF
-URxvt.color4           : #87AFD7
-URxvt.color12          : #87AFDF
-URxvt.color5           : #D7AFD7
-URxvt.color13          : #DFAFDF
-URxvt.color6           : #AFD7D7
-URxvt.color14          : #AFDFDF
-URxvt.color7           : #E6E6E6
-URxvt.color15          : #EEEEEE
+
+! PaperColor Theme
+URxvt.foreground: #4D4D4C
+URxvt.background: #EEEEEE
+URxvt.color0: #EDEDED
+URxvt.color8: #969694
+URxvt.color1: #D7005F
+URxvt.color9: #D7005F
+URxvt.color2: #718C00
+URxvt.color10: #718C00
+URxvt.color3: #D75F00
+URxvt.color11: #D75F00
+URxvt.color4: #4271AE
+URxvt.color12: #4271AE
+URxvt.color5: #8959A8
+URxvt.color13: #8959A8
+URxvt.color6: #3E999F
+URxvt.color14: #3E999F
+URxvt.color7: #4D4D4C
+URxvt.color15: #F5F5F5
+
+!! Base16 Default Dark
+!! Scheme: Chris Kempson (http://chriskempson.com)
+!
+!#define base00 #181818
+!#define base01 #282828
+!#define base02 #383838
+!#define base03 #585858
+!#define base04 #b8b8b8
+!#define base05 #d8d8d8
+!#define base06 #e8e8e8
+!#define base07 #f8f8f8
+!#define base08 #ab4642
+!#define base09 #dc9656
+!#define base0A #f7ca88
+!#define base0B #a1b56c
+!#define base0C #86c1b9
+!#define base0D #7cafc2
+!#define base0E #ba8baf
+!#define base0F #a16946
+!
+!*foreground:   base05
+!#ifdef background_opacity
+!*background:   [background_opacity]base00
+!#else
+!*background:   base00
+!#endif
+!*cursorColor:  base05
+!
+!*color0:       base00
+!*color1:       base08
+!*color2:       base0B
+!*color3:       base0A
+!*color4:       base0D
+!*color5:       base0E
+!*color6:       base0C
+!*color7:       base05
+!
+!*color8:       base03
+!*color9:       base08
+!*color10:      base0B
+!*color11:      base0A
+!*color12:      base0D
+!*color13:      base0E
+!*color14:      base0C
+!*color15:      base07
+!
+!! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+!! use 'shell' template to set these if necessary
+!*color16:      base09
+!*color17:      base0F
+!*color18:      base01
+!*color19:      base02
+!*color20:      base04
+!*color21:      base06
+
