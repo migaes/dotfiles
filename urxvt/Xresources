@@ -5,9 +5,16 @@ Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintsfull
 
+! Font
+URxvt.font	       : xft:inconsolata:pixelsize=15
+URxvt.xftAntialias     : true
+URxvt.depth            : 32
+
 ! Misc
 URxvt*.termName: rxvt-unicode-256color
-URxvt.perl-ext-common:  default,tabbed,fullscreen
+URxvt.perl-ext-common:  default,matcher,tabbed,fullscreen,font-size
+
+! Extensions
 URxvt.keysym.F11: perl:fullscreen:switch
 URxvt.tabbed.tabbar-fg: 166
 URxvt.tabbed.tabbar-bg: 234
@@ -15,10 +22,9 @@ URxvt.tabbed.tab-fg:    166
 URxvt.tabbed.tab-bg:    234
 URxvt*saveLines: 65536
 URxvt.scrollBar: false
-
-URxvt.font	       : xft:inconsolata:pixelsize=15
-URxvt.xftAntialias     : true
-URxvt.depth            : 32
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.colorUL: #4682B4
 
 ! PaperColor Theme
 URxvt.foreground: #4D4D4C

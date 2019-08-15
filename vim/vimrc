@@ -1,31 +1,41 @@
 "
 "" General
 "
-set nocompatible		" Enable vim features instead of strict vi compatibility
+set nocompatible			" Enable vim features instead of strict vi compatibility
+filetype off				" Required by Vundle
 
-syntax enable			" Enable syntax highlighting
-filetype plugin on		" Enable plugins
+set rtp+=~/.vim/bundle/Vundle.vim 	" set the runtime path to include Vundle and initialize
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'hashivim/vim-terraform'
+Plugin 'christianrondeau/vim-base64'
+call vundle#end()            		" All of your Plugins must be added before the following line
+filetype indent on			" Enable loading the indent file for specific file types
 
-filetype indent on		" Enable loading the indent file for specific file types
-filetype on			" Try to detect the filetype
-syntax sync fromstart		" Sync syntax highlighting from the start of the file
-set encoding=utf-8              " The encoding displayed.
-set fileencoding=utf-8          " The encoding written to file.
+syntax enable				" Enable syntax highlighting
+filetype plugin on			" Enable plugins
+
+filetype on				" Try to detect the filetype
+syntax sync fromstart			" Sync syntax highlighting from the start of the file
+set encoding=utf-8              	" The encoding displayed.
+set fileencoding=utf-8          	" The encoding written to file.
 set background=light
 colorscheme PaperColor
-set mouse=a			" Enable the use of mouse in all modes.
-set scrolloff=3			" Show 3 lines above or below cursor when scrolling
-set ruler			" Enable the ruler
-set nowrap			" Do not wrap long lines; have them scroll off the side
-set showmatch			" Show matching brackets and parens
-set number			"
-set laststatus=2		" Displaying status line always
+set mouse=a				" Enable the use of mouse in all modes.
+set scrolloff=3				" Show 3 lines above or below cursor when scrolling
+set ruler				" Enable the ruler
+set nowrap				" Do not wrap long lines; have them scroll off the side
+set showmatch				" Show matching brackets and parens
+set number				"
+set visualbell
+set laststatus=2			" Displaying status line always
 
 "
 " Finding files
 "
-set path+=**	      		" Search down into folders - Provides tab-completion for all file-related tasks
-set wildmenu			" Use pop-up menu for tab completion of filenames
+set path+=**	      			" Search down into folders - Provides tab-completion for all file-related tasks
+set wildmenu				" Use pop-up menu for tab completion of filenames
 
 "
 " Map jj to get to normal mode.
@@ -70,3 +80,11 @@ set noswapfile
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro 	" Disable continuation of comments to the next line
 
+"
+"" Terraform configuration
+"
+let g:terraform_fmt_on_save=1
+
+"
+"" Golang configuration
+"
