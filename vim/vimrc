@@ -7,26 +7,28 @@ filetype off				" Required by Vundle
 set rtp+=~/.vim/bundle/Vundle.vim 	" set the runtime path to include Vundle and initialize
 call vundle#begin()
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'hashivim/vim-terraform'
 Plugin 'christianrondeau/vim-base64'
-" Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
+Plugin 'hashivim/vim-terraform'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'VundleVim/Vundle.vim'
 call vundle#end()            		" All of your Plugins must be added before the following line
 filetype indent on			" Enable loading the indent file for specific file types
 
-syntax enable				" Enable syntax highlighting
+syntax on				" Enable syntax highlighting
 filetype plugin on			" Enable plugins
 
 filetype on				" Try to detect the filetype
 syntax sync fromstart			" Sync syntax highlighting from the start of the file
 set encoding=utf-8              	" The encoding displayed.
 set fileencoding=utf-8          	" The encoding written to file.
-set background=light
+
+set background=light			" PaperColor theme
 colorscheme PaperColor
+
 set mouse=a				" Enable the use of mouse in all modes.
 set scrolloff=3				" Show 3 lines above or below cursor when scrolling
 set ruler				" Enable the ruler
-set nowrap				" Do not wrap long lines; have them scroll off the side
 set showmatch				" Show matching brackets and parens
 set number				"
 set visualbell
