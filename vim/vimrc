@@ -33,6 +33,7 @@ set showmatch				" Show matching brackets and parens
 set number				"
 set visualbell
 set laststatus=2			" Displaying status line always
+set showcmd				" Display vim commands at the bottom
 
 "
 " Browsing files
@@ -57,20 +58,6 @@ inoremap jj <ESC>
 let mapleader = ","
 noremap \ ,
 
-"
-" Copy to and paste from the system clipboard (register +)
-"
-nnoremap <Leader>p "+p
-nnoremap <Leader>P "+P
-vnoremap <Leader>y "+y
-
-"
-" Split ctrl+hjkl navigation
-"
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 "
 "" Search
@@ -83,9 +70,14 @@ set nohlsearch	      " Don't highlight after search
 "
 "" No backups
 "
-set nobackup
-set nowritebackup
-set noswapfile
+"set nobackup
+"set nowritebackup
+"set noswapfile
+
+set undofile " Maintain undo history between sessions
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+set undodir=~/.vim/undo
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro 	" Disable continuation of comments to the next line
 
@@ -95,5 +87,16 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro 	" Disable continuation
 let g:terraform_fmt_on_save=1
 
 "
-"" Golang configuration
+"" Key mapping
 "
+
+nnoremap <C-c> :bp\|bd #<CR>  	" Delete buffer without losing the split window
+
+nnoremap <Leader>p "+p		" Copy to and paste from the system clipboard (register +)
+nnoremap <Leader>P "+P
+vnoremap <Leader>y "+y
+
+nnoremap <C-h> <C-w>h 		" Split ctrl+hjkl navigation
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
