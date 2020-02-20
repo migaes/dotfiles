@@ -3,17 +3,14 @@
 all: git readline tmux urxvt vim
 
 git:
-	ln -fs $(pwd)/git/gitconfig ~/.gitconfig
-
+  ln -fs $(shell pwd)/git/gitconfig ~/.gitconfig
 readline: 
-	ln -fs $(pwd)/readline/inputrc ~/.inputrc
-
+  ln -fs $(shell pwd)/readline/inputrc ~/.inputrc
+  bind -f ~/.inputrc
 tmux:
-	ln -fs $(pwd)/tmux/tmux.conf ~/.tmux.conf
-
+  ln -fs $(shell wd)/tmux/tmux.conf ~/.tmux.conf
 urxvt:
-	ln -fs $(pwd)/urxvt/Xresources ~/.Xresources
-	xrdb ~/.Xresources
-
+  ln -fs $(shell pwd)/urxvt/Xresources ~/.Xresources
+  xrdb ~/.Xresources
 vim:
-	ln -fs $(pwd)/vim/vimrc ~/.vimrc
+  ln -fs $(shell pwd)/vim/vimrc ~/.vimrc
