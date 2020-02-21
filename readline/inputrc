@@ -1,31 +1,21 @@
 $include /etc/inputrc
 set editing-mode vi
 
-# Faster completion
-set show-all-if-ambiguous on
-# Disabling control echo
-set echo-control-characters off
-
 $if mode=vi
-  # Different cursor shapes for command and insert mode
-  $if term=linux
-    set vi-ins-mode-string \1\e[?0c\2
-    set vi-cmd-mode-string \1\e[?8c\2
-  $else
-    set vi-ins-mode-string \1\e[6 q\2
-    set vi-cmd-mode-string \1\e[2 q\2
-  $endif
+  set show-mode-in-prompt on
+  set vi-cmd-mode-string ":"
+  set vi-ins-mode-string "+"
+
   set keymap vi-command
   # these are for vi-command mode
   "\e[A": history-search-backward
   "\e[B": history-search-forward
   j: history-search-forward
   k: history-search-backward
+
   set keymap vi-insert
   "jj": vi-movement-mode
   # these are for vi-insert mode
   "\e[A": history-search-backward
   "\e[B": history-search-forward
 $endif
-
-set bell-style none
