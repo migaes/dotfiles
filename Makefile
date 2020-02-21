@@ -6,9 +6,8 @@ git:
 	ln -fs $(shell pwd)/git/gitconfig ~/.gitconfig
 readline: 
 	ln -fs $(shell pwd)/readline/inputrc ~/.inputrc
-	bind -f ~/.inputrc
 tmux:
-	ln -fs $(shell wd)/tmux/tmux.conf ~/.tmux.conf
+	ln -fs $(shell pwd)/tmux/tmux.conf ~/.tmux.conf
 urxvt:
 	ln -fs $(shell pwd)/urxvt/Xresources ~/.Xresources
 	xrdb ~/.Xresources
