@@ -23,7 +23,7 @@ syntax sync fromstart			" Sync syntax highlighting from the start of the file
 set encoding=utf-8              	" The encoding displayed.
 set fileencoding=utf-8          	" The encoding written to file.
 
-set background=light			" PaperColor theme
+set background=dark			" PaperColor theme
 colorscheme PaperColor
 
 set mouse=a				" Enable the use of mouse in all modes.
